@@ -2,27 +2,34 @@ package br.com.cdems.model;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Embeddable
 public class Endereco {
 	
-	
+	@NotEmpty
 	@Column(length = 50, nullable = false)
 	private String logradouro;
 	
+	@NotNull
 	@Column(length = 6, nullable = false)
 	private Integer numero;
 	
+	@NotEmpty
 	@Column(length = 20, nullable = false)
 	private String bairro;
 	
+	@NotEmpty
 	@Column(length = 2, nullable = false)
 	private String estado;
 	
+	@NotEmpty
 	@Column(length = 10, nullable = false)
 	private String pais;
 	
-	@Column(length = 9, nullable = false)
+	@NotEmpty
+	@Column(length = 8, nullable = false)
 	private String cep;
 	
 	public Endereco() {

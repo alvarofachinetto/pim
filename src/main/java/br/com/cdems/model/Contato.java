@@ -4,17 +4,20 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.validation.constraints.NotEmpty;
 
 @Embeddable
 public class Contato {
 	
+	@NotEmpty
 	@Enumerated(EnumType.STRING)
 	private TipoTelefone tipoTel;
 	
+	@NotEmpty
 	@Column(length = 10, nullable = false)
 	private String telefone;
 	
-	
+	@NotEmpty
 	@Column(length = 11, nullable = false)
 	private String celular;
 	

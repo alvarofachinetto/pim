@@ -9,8 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "Cliente")
@@ -20,19 +20,23 @@ public class Cliente {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
+	@NotBlank
 	@Column(length = 65, nullable = false)
 	private String nome;
 
-	@JsonFormat(pattern = "dd/MM/yyyy")
+	@NotNull
 	@Column(nullable = false)
 	private LocalDate nascimento;
 	
+	@NotNull
 	@Column(length = 15, nullable = false, unique = true)
 	private String cpfcnpj;
 	
+	@NotNull
 	@Column(length = 30, nullable = false)
 	private String email;
 	
+	@NotNull
 	@Column(length = 10, nullable = false)
 	private String senha;
 

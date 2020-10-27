@@ -15,21 +15,24 @@ public class ClienteService {
 	@Autowired
 	private ClienteRepository clienteRepository;
 	
+	@Autowired
+	private ContaService contaService;
+	
 	@Transactional
 	public Cliente buscarCliente(String cpfCnpj) {
 		
 		Cliente cliente = clienteRepository.findByCpfcnpj(cpfCnpj)
 				.orElseThrow(() -> new RecursoNaoEncontradoException("CPF ou CNPJ não encontrado!"));
-		
 		return cliente;
-		
 	}
 	
 	@Transactional
 	public Cliente salvarCliente(Cliente cliente) {
 		
 		if(!cliente.equals(null)) {
-			return clienteRepository.save(cliente);
+			Cliente novo = clienteRepository.save(cliente);
+			contaService.criarConta(novo.getCpfcnpj());
+			return novo;
 		}
 		
 		throw new ObjetoNuloException("Cliente não preenchido!");
