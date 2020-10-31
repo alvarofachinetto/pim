@@ -1,0 +1,10 @@
+INSERT INTO historico_moeda(nome, dt_mov_moeda, pu_moeda) VALUES("Bitcoin",'2020-10-17',64500);
+INSERT INTO historico_moeda (nome, dt_mov_moeda, pu_moeda) VALUES("Bitcoin",'2020-10-16',64475.90);
+INSERT INTO historico_moeda(nome, dt_mov_moeda, pu_moeda) VALUES("Bitcoin",'2020-10-15',65000);
+INSERT INTO historico_moeda (nome, dt_mov_moeda, pu_moeda) VALUES("Bitcoin",'2020-10-14',64100.6);
+INSERT INTO historico_moeda (nome, dt_mov_moeda, pu_moeda) VALUES("Bitcoin",'2020-10-13',63601.7);
+INSERT INTO historico_moeda (nome, dt_mov_moeda, pu_moeda) VALUES("Bitcoin",'2020-10-12',63849.8);
+INSERT INTO historico_moeda (nome, dt_mov_moeda, pu_moeda) VALUES("Bitcoin",'2020-10-11',63000);
+INSERT INTO historico_moeda (nome, dt_mov_moeda, pu_moeda) VALUES("Bitcoin",'2020-10-10',62747.2);
+INSERT INTO historico_moeda (nome, dt_mov_moeda, pu_moeda) VALUES("Bitcoin",'2020-10-09',61960);
+INSERT INTO historico_moeda (nome, dt_mov_moeda, pu_moeda) VALUES("Bitcoin",'2020-10-08',61218.5);
